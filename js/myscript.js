@@ -1,3 +1,4 @@
+// Inputs
 // Chiedo il numero di km
 const numeroKm = parseInt(prompt("Inserire il numero di chilometri"));
 console.log(numeroKm);
@@ -6,6 +7,7 @@ console.log(numeroKm);
 const eta = parseInt(prompt("Inserire l'età"));
 console.log(eta);
 
+// Variabili
 let prezzo = (numeroKm * 0.21);
 let sconto;
 let prezzoAttuale;
@@ -30,5 +32,7 @@ else {
 prezzoAttuale = prezzo - sconto;
 console.log(prezzoAttuale);
 
+let rounded = Math.round((prezzoAttuale + Number.EPSILON) * 100) / 100;
+
 // Stampo il pezzo del biglietto
-document.getElementById("prezzo-id").innerHTML = "Il prezzo totale del biglietto è: " + prezzoAttuale + " euro";
+document.getElementById("prezzo-id").innerHTML = "Il prezzo totale del biglietto è: " + rounded + " euro";
